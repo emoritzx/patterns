@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/patterns.iml" filepath="$PROJECT_DIR$/patterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patterns-core/patterns-core.iml" filepath="$PROJECT_DIR$/patterns-core/patterns-core.iml" />
     </modules>
   </component>
 </project>
