@@ -1,7 +1,10 @@
+/**
+ * Copyright (c) 2017, Evan Moritz.
+ * Licensed under the MIT License. See the accompanying LICENSE file for terms.
+ */
 package me.abiogenesis.patterns.util;
 
 import java.util.*;
-import java.util.stream.Stream;
 
 public final class CartesianProduct<T> implements Iterator<List<T>> {
 
