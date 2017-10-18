@@ -15,4 +15,4 @@ See the accompanying LICENSE file for terms.
 References
 ----------
 
-  - SET&reg; is a registered trademark of Cannei, LLC.
+  - SET&reg; is a registered trademark of Cannei, LLC. [site](https://www.setgame.com/set)
