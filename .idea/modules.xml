@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/patterns.iml" filepath="$PROJECT_DIR$/patterns.iml" />
       <module fileurl="file://$PROJECT_DIR$/patterns-core/patterns-core.iml" filepath="$PROJECT_DIR$/patterns-core/patterns-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/patterns-pwa/patterns-pwa.iml" filepath="$PROJECT_DIR$/patterns-pwa/patterns-pwa.iml" />
     </modules>
   </component>
 </project>
