@@ -3,10 +3,13 @@ package me.abiogenesis;
 import com.vaadin.annotations.JavaScript;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
-import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
+import com.vaadin.server.*;
+import org.vaadin.leif.headertags.HeaderTagHandler;
+import org.vaadin.leif.headertags.Link;
 import com.vaadin.ui.*;
 import org.apache.commons.io.IOUtils;
+import org.vaadin.leif.headertags.Meta;
+import org.vaadin.leif.headertags.MetaTags;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,6 +25,11 @@ import java.io.OutputStream;
  */
 @Theme("mytheme")
 @JavaScript("vaadin://js/app.js")
+@MetaTags({
+    @Meta(name="viewport", content="width=device-width, initial-scale=1"),
+    @Meta(name="theme-color", content="#00b4f0")
+})
+@Link(rel="manifest", href="VAADIN/manifest.json")
 public class MyUI extends UI {
 
     @Override
@@ -49,6 +57,8 @@ public class MyUI extends UI {
         @Override
         protected void servletInitialized() throws ServletException {
             super.servletInitialized();
+            final BootstrapListener listener = new HeaderTagHandler();
+            getService().addSessionInitListener(event -> event.getSession().addBootstrapListener(listener));
             getService().addSessionInitListener(event ->
                 event.getSession().addRequestHandler(
                     (session, request, response) -> {
